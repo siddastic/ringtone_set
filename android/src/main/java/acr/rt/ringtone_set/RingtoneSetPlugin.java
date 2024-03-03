@@ -214,7 +214,7 @@ public class RingtoneSetPlugin implements FlutterPlugin, MethodCallHandler {
             if (android.os.Build.VERSION.SDK_INT > 28) {// file.exists
                 ContentValues values = new ContentValues();
                 values.put(MediaStore.MediaColumns.RELATIVE_PATH, mFile.getAbsolutePath());
-                values.put(MediaStore.MediaColumns.TITLE, "Custom ringtone");
+                values.put(MediaStore.MediaColumns.DISPLAY_NAME, "Custom ringtone");
                 values.put(MediaStore.MediaColumns.MIME_TYPE, getMIMEType(mFile.getAbsolutePath(), downloadedMimeType));
                 values.put(MediaStore.MediaColumns.SIZE, mFile.length());
                 values.put(MediaStore.Audio.Media.ARTIST, "Ringtone app");
